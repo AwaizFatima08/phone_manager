@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+import 'package:phonemanager/app.dart';
+import 'package:phonemanager/core/byte_size.dart';
+import 'package:phonemanager/features/apps/domain/app_query.dart';
+import 'package:phonemanager/features/apps/view/widgets/app_icon.dart';
+
+/// One row of the app list: icon, name, version and size.
+class AppTile extends StatelessWidget {
+  const AppTile({
+    required this.entry,
+    required this.isSelected,
+    required this.onTap,
+    required this.onLongPress,
+    this.showCache = false,
+    super.key,
+  });
+
+  final AppEntry entry;
+  final bool isSelected;
+  final VoidCallback onTap;
+  final VoidCallback onLongPress;
+
+  /// Show the cache size instead of the total (while the list is sorted by cache).
+  final bool showCache;
+
+  @override
+  Widget build(BuildContext context) {
+    final app = entry.app;
+    final size = entry.size;
+    final locale = Localizations.localeOf(context).toString();
+    return ListTile(
+      selected: isSelected,
+      onTap: onTap,
+      onLongPress: onLongPress,
+      leading: isSelected
+          ? const SizedBox.square(dimension: 40, child: Icon(Icons.check_circle))
+          : AppIcon(packageName: app.packageName),
+      title: Text(app.label, maxLines: 1, overflow: TextOverflow.ellipsis),
+      subtitle: _Subtitle(
+        version: app.versionName,
+        isSystem: app.isSystem,
+        isDisabled: !app.isEnabled,
+      ),
+      trailing: size == null
+          ? null
+          : Text(
+              showCache
+                  ? context.l10n.cacheValue(formatBytes(size.cacheBytes, locale: locale))
+                  : formatBytes(size.totalBytes, locale: locale),
+              style: Theme.of(context).textTheme.labelLarge,
+            ),
+    );
+  }
+}
+
+class _Subtitle extends StatelessWidget {
+  const _Subtitle({required this.version, required this.isSystem, required this.isDisabled});
+
+  final String version;
+  final bool isSystem;
+  final bool isDisabled;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = context.l10n;
+    final parts = [
+      if (version.isNotEmpty) l10n.versionLine(version),
+      if (isSystem) l10n.badgeSystem,
+      if (isDisabled) l10n.badgeDisabled,
+    ];
+    return Text(parts.join(' · '), maxLines: 1, overflow: TextOverflow.ellipsis);
+  }
+}

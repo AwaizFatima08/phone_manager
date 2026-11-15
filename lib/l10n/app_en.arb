@@ -1,0 +1,405 @@
+{
+  "@@locale": "en",
+  "appTitle": "Phone Manager",
+  "loadError": "Could not read the apps on this phone ({code}).",
+  "@loadError": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "retry": "Try again",
+  "searchHint": "Search apps",
+  "clearSearch": "Clear search",
+  "scopeUser": "Installed",
+  "scopeSystem": "System",
+  "scopeAll": "All",
+  "sortLabel": "Sort",
+  "sortName": "Name",
+  "sortTotalSize": "Largest first",
+  "sortCacheSize": "Most cache first",
+  "sortRecentlyUpdated": "Recently updated",
+  "sortNeedsAccess": "Sizes need usage access",
+  "totalsLine": "{count, plural, =1{1 app} other{{count} apps}} · {total} · cache {cache}",
+  "@totalsLine": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "String"
+      },
+      "cache": {
+        "type": "String"
+      }
+    }
+  },
+  "totalsCountOnly": "{count, plural, =1{1 app} other{{count} apps}}",
+  "@totalsCountOnly": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noApps": "No apps match.",
+  "usageAccessTitle": "See sizes, cache and screen time",
+  "usageAccessBody": "Allow Usage access. It is read on your phone only; nothing leaves it.",
+  "usageAccessButton": "Allow",
+  "settingsUnavailable": "This phone did not open the settings screen.",
+  "badgeSystem": "System",
+  "badgeDisabled": "Disabled",
+  "versionLine": "Version {version}",
+  "@versionLine": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "selectedCount": "{count} selected",
+  "@selectedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectAll": "Select all shown",
+  "cancelSelection": "Cancel selection",
+  "uninstallSelected": "Uninstall selected",
+  "batchConfirmTitle": "Uninstall {count, plural, =1{1 app} other{{count} apps}}?",
+  "@batchConfirmTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "batchConfirmBody": "Android asks you to confirm each app. System apps in the selection are skipped.",
+  "batchConfirmGo": "Start",
+  "cancel": "Cancel",
+  "batchReport": "Uninstalled {removed} of {requested}.",
+  "@batchReport": {
+    "placeholders": {
+      "removed": {
+        "type": "int"
+      },
+      "requested": {
+        "type": "int"
+      }
+    }
+  },
+  "openApp": "Open",
+  "uninstall": "Uninstall",
+  "uninstallUpdates": "Remove updates",
+  "appInfo": "App info",
+  "uninstalled": "{label} was uninstalled.",
+  "@uninstalled": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "uninstallFailed": "Android could not start the uninstall.",
+  "appGone": "This app is no longer installed.",
+  "systemAppNote": "Built into the phone. It cannot be uninstalled, but you can disable it in App info.",
+  "storageTitle": "Storage",
+  "storageApp": "App",
+  "storageData": "User data",
+  "storageCache": "Cache",
+  "storageTotal": "Total",
+  "storageNoAccess": "Allow usage access to see this app's size.",
+  "clearCache": "Clear cache",
+  "clearCacheSheetTitle": "Clear the cache in Android's settings",
+  "clearCacheSheetBody": "Android lets only its own settings clear another app's cache. Phone Manager opens the right page for you.",
+  "clearCacheStep1": "Tap Storage & cache (or Storage).",
+  "clearCacheStep2": "Tap Clear cache.",
+  "clearCacheStep3": "Come back here: the new size shows up.",
+  "permissionsTitle": "Permissions",
+  "permissionsAllowed": "Allowed",
+  "permissionsDenied": "Not allowed",
+  "permissionsSpecial": "Special access",
+  "permissionsFixed": "Granted at install ({count})",
+  "@permissionsFixed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "permissionsNone": "This app asks for no permissions.",
+  "permissionsFixedNote": "Android grants these when the app is installed. They cannot be switched off.",
+  "permissionsError": "Could not read this app's permissions.",
+  "changePermissions": "Change permissions",
+  "permissionsSheetTitle": "Change permissions in Android's settings",
+  "permissionsSheetBody": "Only Android's settings can allow or deny another app's permissions. Phone Manager opens the right page for you.",
+  "permissionsStep1": "Tap Permissions.",
+  "permissionsStep2": "Pick a permission and choose Allow or Don't allow.",
+  "permissionsStep3": "Come back here: the list updates.",
+  "openSettings": "Open settings",
+  "detailsTitle": "Details",
+  "detailPackage": "Package",
+  "detailInstalled": "Installed",
+  "detailUpdated": "Updated",
+  "detailTargetSdk": "Target Android API",
+  "detailMinSdk": "Minimum Android API",
+  "detailInstaller": "Installed from",
+  "detailInstallerUnknown": "Unknown (sideloaded or preinstalled)",
+  "detailStatus": "Status",
+  "statusEnabled": "Enabled",
+  "statusDisabled": "Disabled",
+  "privacyChoices": "Privacy choices",
+  "about": "About",
+  "aboutBody": "Phone Manager by HomiLabs brings storage, battery, apps, memory, cache and app permissions together in one place, and takes you straight to the right Android setting when only Android can make the change. Everything it reads stays on your phone.",
+  "cacheValue": "{size} cache",
+  "@cacheValue": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "readError": "Could not read this from the phone ({code}).",
+  "@readError": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "appsTitle": "Apps",
+  "storageTool": "Storage",
+  "powerTool": "Battery",
+  "appsTool": "Apps",
+  "memoryTool": "Memory",
+  "cacheTool": "Cache cleaner",
+  "permissionsTool": "App permissions",
+  "freeOf": "{free} free of {total}",
+  "@freeOf": {
+    "placeholders": {
+      "free": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "usedOf": "{used} of {total} used",
+  "@usedOf": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "freeSpace": "{size} free",
+  "@freeSpace": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "batteryPercent": "{percent}%",
+  "@batteryPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "batteryCharging": "{percent}% · charging",
+  "@batteryCharging": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "needsUsageAccess": "Needs usage access",
+  "cacheInApps": "{size} of cache in apps",
+  "@cacheInApps": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "appsWithLocation": "{count, plural, =0{No apps use your location} =1{1 app can use your location} other{{count} apps can use your location}}",
+  "@appsWithLocation": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "whatUsesSpace": "What uses the space",
+  "storageApps": "Apps (incl. their data)",
+  "storageImages": "Images",
+  "storageVideos": "Videos",
+  "storageAudio": "Audio",
+  "storageOtherFiles": "Other files",
+  "storageAppCache": "App cache (part of apps)",
+  "storageBreakdownNote": "Android itself and its system files take the rest.",
+  "freeUpSpaceTitle": "Free up space",
+  "freeUpSpaceBody": "Android's own clean-up suggests large files, old downloads and apps you don't use. You choose what goes.",
+  "freeUpSpaceButton": "Open free up space",
+  "storageSettingsButton": "Open storage settings",
+  "unknown": "Unknown",
+  "on": "On",
+  "off": "Off",
+  "batteryDetails": "Details",
+  "batteryHealth": "Health",
+  "batteryTemperature": "Temperature",
+  "batteryVoltage": "Voltage",
+  "batteryCurrent": "Current",
+  "batteryCycles": "Charge cycles",
+  "batteryTechnology": "Type",
+  "batterySaver": "Battery saver",
+  "celsius": "{value} °C",
+  "@celsius": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "volts": "{value} V",
+  "@volts": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "milliAmps": "{value} mA",
+  "@milliAmps": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "batteryHotTip": "The battery is hot. Unplug fast chargers, close games and the camera, and keep the phone out of the sun until it cools down.",
+  "saveBatteryTitle": "Save battery",
+  "saveBatteryBody": "Battery saver limits background work. Battery usage shows which apps used the most power since the last charge.",
+  "batterySaverButton": "Battery saver settings",
+  "batteryUsageButton": "Battery usage by app",
+  "batteryOptimizationButton": "Battery optimisation per app",
+  "sourceCharger": "charger",
+  "sourceUsb": "USB",
+  "sourceWireless": "wireless charger",
+  "sourceOther": "dock",
+  "statusCharging": "Charging",
+  "statusFull": "Full",
+  "statusOnBattery": "On battery",
+  "statusNotCharging": "Plugged in, not charging",
+  "fullIn": "full in {hours} h {minutes} min",
+  "@fullIn": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "healthGood": "Good",
+  "healthOverheat": "Overheating",
+  "healthDead": "Worn out",
+  "healthOverVoltage": "Over voltage",
+  "healthCold": "Too cold",
+  "healthFailure": "Fault reported",
+  "screenTimeTitle": "Most used today",
+  "screenTimeBody": "Screen time in the last 24 hours. Apps you use most also use the most battery.",
+  "allowUsageAccessForScreenTime": "Allow usage access to see screen time",
+  "noRecentUse": "No app use recorded in the last 24 hours.",
+  "durationHm": "{hours} h {minutes} min",
+  "@durationHm": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "memoryLow": "Memory is low: Android is closing background apps.",
+  "memoryFree": "{size} available",
+  "@memoryFree": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "stopBackgroundTitle": "Stop background apps",
+  "stopBackgroundBody": "Asks Android to stop apps running in the background. Android restarts some of them when they are needed, so the gain is often small and short-lived.",
+  "stopBackgroundUnavailable": "From Android 14, only Android can stop other apps. Android frees memory on its own when it runs low. To stop one app, open it from the list below and tap App info, then Force stop.",
+  "stopBackgroundButton": "Stop background apps",
+  "stopReport": "Asked {apps} apps to stop. {size} more memory is free now.",
+  "@stopReport": {
+    "placeholders": {
+      "apps": {
+        "type": "int"
+      },
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "stopReportNoGain": "Asked {apps} apps to stop. Free memory did not change much: Android was already managing it.",
+  "@stopReportNoGain": {
+    "placeholders": {
+      "apps": {
+        "type": "int"
+      }
+    }
+  },
+  "stopFailed": "Android did not stop the apps.",
+  "memoryAppsBody": "The apps you used most in the last 24 hours. Tap one for its details.",
+  "cacheExplainer": "Cache is temporary data apps keep to load faster. Clearing it frees space, but apps build it up again as you use them.",
+  "ownCacheTitle": "Phone Manager's cache",
+  "ownCacheLabel": "Cache now",
+  "clearNow": "Clear now",
+  "ownCacheCleared": "Cleared {size}.",
+  "@ownCacheCleared": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "ownCacheFailed": "Could not clear the cache.",
+  "cacheFreeUpBody": "Android's own clean-up can clear cached and unused files for many apps at once.",
+  "cacheByApp": "Cache by app (tap to clear)",
+  "noCache": "No app has cache right now.",
+  "permissionsOverviewBody": "Which apps are allowed to use sensitive features right now. Tap a permission to see the apps, then an app to change what it may use.",
+  "privacySettings": "Open privacy settings",
+  "noGrantedPermissions": "No installed app holds a sensitive permission.",
+  "groupAppsBody": "Installed apps that are allowed this now. Tap an app to review or change its permissions.",
+  "groupLocation": "Location",
+  "groupCamera": "Camera",
+  "groupMicrophone": "Microphone",
+  "groupContacts": "Contacts",
+  "groupPhone": "Phone",
+  "groupSms": "SMS",
+  "groupCallLog": "Call logs",
+  "groupCalendar": "Calendar",
+  "groupMedia": "Photos and media",
+  "groupFiles": "Files and storage",
+  "groupBodySensors": "Body sensors",
+  "groupActivity": "Physical activity",
+  "groupNearby": "Nearby devices",
+  "groupNotifications": "Notifications",
+  "groupOther": "Other"
+}
