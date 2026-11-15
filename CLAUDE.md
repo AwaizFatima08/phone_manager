@@ -51,6 +51,7 @@ apps, clear own cache, batch uninstall), 5 minutes apart; never on a detail scre
   --split-debug-info=build/symbols && cd android && ./gradlew --stop'`, then copy the bundle and zipped symbols to
   `releases/v<version>-<build>/` (gitignored). Bump `version:` in pubspec before every new upload.
 - Icon source `assets/branding/` (SVG; launcher PNGs rendered with Inkscape); Play icon `store/play-icon-512.png`.
+- Play Console notes (ids, listing, declarations, Data safety, status): `docs/play-store.md`.
 
 ## Gate before commit
 ```
