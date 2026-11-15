@@ -52,6 +52,7 @@ apps, clear own cache, batch uninstall), 5 minutes apart; never on a detail scre
   `releases/v<version>-<build>/` (gitignored). Bump `version:` in pubspec before every new upload.
 - Icon source `assets/branding/` (SVG; launcher PNGs rendered with Inkscape); Play icon `store/play-icon-512.png`.
 - Play Console notes (ids, listing, declarations, Data safety, status): `docs/play-store.md`.
+- 1.0.0 (build 1) sent for Play review 15 Nov 2026. After approval: AdMob → Phone Manager → "Add store" to link the listing.
 
 ## Gate before commit
 ```

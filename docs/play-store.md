@@ -20,8 +20,9 @@ Package `com.homilabs.phonemanager` (cannot change after the first upload). Orga
   (no restrictions), advertising ID (advertising), government (no), financial (none), health (none), target audience
   18+, content rating (Everyone / PEGI 3 / 3+), data safety, store listing text, store settings (Tools,
   homilabs.smc@gmail.com, https://tools.homilabs.org).
-- Not done yet: store graphics upload, production release (bundle upload, countries), QUERY_ALL_PACKAGES
-  declaration (appears after the bundle is uploaded), send for review.
+- 15 Nov 2026: Homi uploaded the graphics and the 1.0.0 (1) bundle. QUERY_ALL_PACKAGES declaration saved (core
+  purpose: device/app management; usage: app functionality; video link above). Production release 1 (1.0.0) in
+  178 countries sent for review (11 changes); managed publishing off, so it goes live on approval.
 
 ## Signing
 - Upload key `.secrets/phonemanager-upload.keystore`, alias `phonemanager-upload` (gitignored; password in
