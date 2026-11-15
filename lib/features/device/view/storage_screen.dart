@@ -54,7 +54,7 @@ class _StorageBody extends ConsumerWidget {
       physics: const AlwaysScrollableScrollPhysics(),
       padding: screenPadding,
       children: [
-        if (breakdown == null) const UsageAccessBanner(),
+        if (breakdown == null) const UsageAccessBanner(margin: UsageAccessBanner.inListMargin),
         SectionCard(
           children: [
             Meter(

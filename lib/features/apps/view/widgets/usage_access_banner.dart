@@ -6,14 +6,27 @@ import 'package:phonemanager/ui/theme.dart';
 
 /// Explains why sizes are missing and opens Android's Usage access page.
 class UsageAccessBanner extends ConsumerWidget {
-  const UsageAccessBanner({super.key});
+  const UsageAccessBanner({super.key, this.margin = pageMargin});
+
+  /// Margin when the banner sits at the top of a page or list of its own.
+  static const pageMargin = EdgeInsetsDirectional.fromSTEB(
+    AppSpacing.md,
+    AppSpacing.sm,
+    AppSpacing.md,
+    0,
+  );
+
+  /// Margin inside a padded list of cards: no sides, the cards' gap below.
+  static const inListMargin = EdgeInsetsDirectional.only(bottom: AppSpacing.sm);
+
+  final EdgeInsetsGeometry margin;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = context.l10n;
     final theme = Theme.of(context);
     return Card(
-      margin: const EdgeInsetsDirectional.fromSTEB(AppSpacing.md, AppSpacing.sm, AppSpacing.md, 0),
+      margin: margin,
       color: theme.colorScheme.secondaryContainer,
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(

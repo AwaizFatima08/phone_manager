@@ -54,6 +54,8 @@ class HomeScreen extends ConsumerWidget {
         const PermissionsScreen(),
       ),
     ];
+    // Cards grow with the phone's font size: two lines of title and two of summary must fit.
+    final cardHeight = 64 + MediaQuery.textScalerOf(context).scale(96);
     return Scaffold(
       appBar: AppBar(title: Text(l10n.appTitle), actions: const [OverflowMenu()]),
       body: CustomScrollView(
@@ -62,9 +64,9 @@ class HomeScreen extends ConsumerWidget {
           SliverPadding(
             padding: const EdgeInsetsDirectional.all(AppSpacing.md),
             sliver: SliverGrid.builder(
-              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: 260,
-                mainAxisExtent: 148,
+                mainAxisExtent: cardHeight,
                 crossAxisSpacing: AppSpacing.sm,
                 mainAxisSpacing: AppSpacing.sm,
               ),
@@ -162,7 +164,12 @@ class _ToolCard extends StatelessWidget {
             children: [
               Icon(tool.icon, size: 32, color: theme.colorScheme.primary),
               const Spacer(),
-              Text(tool.title, style: theme.textTheme.titleMedium),
+              Text(
+                tool.title,
+                style: theme.textTheme.titleMedium,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
               const SizedBox(height: AppSpacing.xs),
               Text(
                 tool.summary,

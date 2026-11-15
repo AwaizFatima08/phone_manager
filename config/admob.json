@@ -1,24 +1,24 @@
 {
-  "_note": "AdMob config for Phone Manager (Android), AdMob account homilabs.smc@gmail.com. Ad ids are not secrets; debug builds use Google's sample ids and release builds these. Replace every TODO once the app and units exist in AdMob, then run scripts/check-release-ad-ids.sh.",
+  "_note": "AdMob config for Phone Manager (Android), AdMob account homilabs.smc@gmail.com. Ad ids are not secrets; debug builds use Google's sample ids and release builds these. App and units created 15 Nov 2026.",
   "account": "homilabs.smc@gmail.com",
   "publisher_id": "pub-2087846699268567",
   "app": {
     "name": "Phone Manager",
     "platform": "android",
-    "app_id": "TODO ca-app-pub-2087846699268567~XXXXXXXXXX",
-    "status": "not created yet"
+    "app_id": "ca-app-pub-2087846699268567~2106024126",
+    "status": "requires review (link the Play listing once published)"
   },
   "ad_units": {
     "list_banner": {
       "name": "phonemanager_banner",
       "format": "banner",
-      "id": "TODO ca-app-pub-2087846699268567/XXXXXXXXXX",
+      "id": "ca-app-pub-2087846699268567/4009957726",
       "placement": "bottom of the home dashboard and the app list only"
     },
     "break_interstitial": {
       "name": "phonemanager_break_interstitial",
       "format": "interstitial",
-      "id": "TODO ca-app-pub-2087846699268567/XXXXXXXXXX",
+      "id": "ca-app-pub-2087846699268567/4592586664",
       "placement": "after a clean-up report is closed (stop background apps, clear own cache, batch uninstall); at most once every 5 minutes; never over a system dialog or on a detail screen"
     }
   },

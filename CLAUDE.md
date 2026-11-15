@@ -36,15 +36,17 @@ detail, uninstall and per-app permissions, unchanged).
 - Play: `QUERY_ALL_PACKAGES` needs the "device management / app manager" declaration in Play Console.
 
 ## Ads
-AdMob account homilabs.smc@gmail.com (publisher pub-2087846699268567). Config in `config/admob.json`: the Phone
-Manager app and its two units are **not created yet** (TODO ids); until then the manifest and `lib/ads/ad_ids.dart`
-hold Google's sample ids and `bash scripts/check-release-ad-ids.sh` fails — it must pass before a release build.
+AdMob account homilabs.smc@gmail.com (publisher pub-2087846699268567). App `~2106024126` and units
+`phonemanager_banner` and `phonemanager_break_interstitial` created 15 Nov 2026 (ids in `config/admob.json`; the app
+"requires review" until the Play listing is linked in AdMob). Debug builds use Google's sample units;
+`bash scripts/check-release-ad-ids.sh` must pass before a release build.
 Banner at the bottom of the home dashboard and the app list; interstitial after a clean-up report (stop background
 apps, clear own cache, batch uninstall), 5 minutes apart; never on a detail screen. UMP consent before the SDK starts.
 
 ## Release
-- Upload key `.secrets/phonemanager-upload.keystore` (gitignored; `android/key.properties` points at it) — not created
-  yet. Release builds are unsigned without it, never debug-signed.
+- Upload key `.secrets/phonemanager-upload.keystore` (created 15 Nov 2026; gitignored; password in
+  `.secrets/phonemanager-upload-keystore-credentials.txt`; `android/key.properties` points at it). Release builds are
+  unsigned without it, never debug-signed. Losing it means a Play upload-key reset: it is in the local backup.
 - Build: `jobq run --name phonemanager-release-aab -- bash -c 'flutter build appbundle --release --obfuscate
   --split-debug-info=build/symbols && cd android && ./gradlew --stop'`, then copy the bundle and zipped symbols to
   `releases/v<version>-<build>/` (gitignored). Bump `version:` in pubspec before every new upload.

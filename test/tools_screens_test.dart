@@ -58,6 +58,19 @@ void main() {
     return (platform, fake);
   }
 
+  testWidgets('home cards fit a narrow phone with large text', (tester) async {
+    // Oppo CPH2743 with display zoom: 1080 px at 3.375 = 320 dp wide.
+    tester.view
+      ..physicalSize = const Size(1080, 2372)
+      ..devicePixelRatio = 3.375;
+    tester.platformDispatcher.textScaleFactorTestValue = 1.3;
+    addTearDown(tester.view.reset);
+    addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
+    await pump(tester, access: false);
+    await tester.scrollUntilVisible(find.text('App permissions'), 200);
+    expect(tester.takeException(), isNull);
+  });
+
   Future<void> open(WidgetTester tester, String tool) async {
     await tester.tap(find.text(tool));
     await tester.pumpAndSettle();

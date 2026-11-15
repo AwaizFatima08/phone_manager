@@ -41,7 +41,7 @@ class CacheScreen extends ConsumerWidget {
           physics: const AlwaysScrollableScrollPhysics(),
           padding: screenPadding,
           children: [
-            if (noAccess) const UsageAccessBanner(),
+            if (noAccess) const UsageAccessBanner(margin: UsageAccessBanner.inListMargin),
             if (total != null)
               SectionCard(
                 children: [
